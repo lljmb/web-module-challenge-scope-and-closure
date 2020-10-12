@@ -26,12 +26,11 @@ function processFirstItem(stringList, callback) {
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
- * 1. What is the difference between counter1 and counter2?
+ * 1. What is the difference between counter1 and counter2? counter 1 declares the variable inside of the function, counter2 uses closure to access the variable outside of the function
  * 
- * 2. Which of the two uses a closure? How can you tell?
+ * 2. Which of the two uses a closure? How can you tell? counter2 bc it reaches outside o the function scope to access the count
  * 
- * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? if you're doing a bunch of small tasks like for a game, counter1 may be perferrable where you declare variables & return them within the functons. counter2 may be helpful if you need to declare variables that you won't be using until later, like when building a webpage for example
 */
 
 // counter1 code
