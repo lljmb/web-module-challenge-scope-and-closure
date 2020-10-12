@@ -56,11 +56,15 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
 
     /*Code Here*/
+    let teamScore = Math.round(Math.random());
+    return teamScore;
 
 }
+
+console.log(inning(1))
 
 /* Task 3: finalScore()
 
@@ -76,10 +80,13 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(inning, num){
+  let finalScore = {Home:0, Away:0};
+  for ( let i=0; i<num; i++) {
+    finalScore.Home += inning();
+    finalScore.Away += inning();
+  }
+  return finalScore
 }
 
 /* Task 4: 
@@ -103,8 +110,12 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, num) {
+  const getInningScore = function(callback){
+    let inningScore = 0;
+     return function(){
+       return inningScore += callback();
+      }
+    }
 }
-
 
